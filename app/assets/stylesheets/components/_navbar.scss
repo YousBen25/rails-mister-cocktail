@@ -2,7 +2,7 @@
   justify-content: space-between;
   background: white;
   background-color: transparent;
-  transition: 0.5s background-color ease;
+  transition: 0.3s background-color ease;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,8 +13,8 @@
   width: 40px;
 }
 
-.navbar-lewagon-white {
-  background-color: white;
+.navbar-lewagon-cocktail {
+  background-image: asset-url('Cocktails-banner.jpg');
 }
 
 .navbar-brand h3 {

@@ -1,10 +1,12 @@
-<div class="banner show" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path "cocktails.jpg" %>')">
-</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path "cocktails.jpg" %>')">
   <div class="container show-info">
     <div class="row">
       <div class="col-md-8 card-description">
         <div>
           <h1><%= @cocktail.name %></h1>
+        </div>
+        <div>
+          <p> <%= "Lorem ipsum sdfnefkqsdfjkqsdfqsdkfq" * 3 %> </p>
         </div>
       </div>
       <div class="col-md-4 card-ingredient">
@@ -23,5 +25,6 @@
       </div>
     </div>
   </div>
+</div>
 
 
