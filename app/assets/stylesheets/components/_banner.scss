@@ -3,6 +3,9 @@
   background-position: center;
   padding: 150px 0;
   height: 100vh;
+  &.show {
+    height: 50vh;
+  }
 }
 
 .banner h1 {
