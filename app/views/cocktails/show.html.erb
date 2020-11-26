@@ -1,0 +1,21 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path "cocktails.jpg" %>')">
+  <div class="cocktail-container">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Descritpion:</h3>
+        <h5>Blend: <%=%> </h5>
+      </div>
+      <div class="col-md-4">
+        <h3>Ingredients:</h3>
+        <% @cocktail.doses.each do |dose|  %>
+          <%= dose.ingredient.name %><%= dose.description  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail)%>
