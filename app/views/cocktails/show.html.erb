@@ -1,5 +1,5 @@
 <%= render 'shared/navbar' %>
-<div class="banner d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path "cocktails.jpg" %>')">
+<div class="banner d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= cl_image_path @cocktail.photo.key %>')">
   <div class="container show-info">
     <div class="row d-flex justify-content-center">
       <div class="col-md-7 card-description">
@@ -27,5 +27,4 @@
     </div>
   </div>
 </div>
-
 

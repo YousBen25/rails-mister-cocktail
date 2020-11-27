@@ -24,4 +24,3 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initSelect2();
 });
-\
