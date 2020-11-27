@@ -23,11 +23,44 @@
   font-weight: bold;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-  margin-left: 44px;
 }
 
 .btn-dose:hover {
   opacity: 1;
   background-color: #F2545B;
   color: white;
+}
+
+.btn-show-back {
+    border: 1px solid;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: $green;
+    color:white;
+    &:hover {
+      opacity: .8;
+      color: white;
+
+    }
+}
+
+.btn-show-review {
+    border: 1px solid;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #F2545B;
+    color: white;
+    &:hover{
+      opacity: .8;
+      color: white;
+    }
+}
+
+.upload-photo {
+  border: 1px solid #d3d3d3;
+  padding: 16px 24px;
+  cursor: pointer;
+  font-weight: 500;
+  background: white;
+  border-radius: 2px;
 }
