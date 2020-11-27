@@ -4,9 +4,10 @@
       <h1>Your review:</h1>
         <%= simple_form_for([@cocktail, @review]) do |f| %>
           <%= f.input :content %>
-          <%= f.input :rating %>
+          <%= f.input :rating, input_html: { min: 0, max: 5 } %>
           <%= f.button :submit, class: "btn-success" %>
         <% end %>
+        <p>*<strong>Important</strong>: ratings should be between 0 and 5, thanks</p>
     </div>
   </div>
 </div>
