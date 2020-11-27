@@ -29,4 +29,11 @@
   box-shadow: -2px 6px 7px 1px #CCCCCC;
   padding: 12px;
   margin-bottom: 8px;
+  & li {
+        list-style: none;
+        & i {
+          color: #F2545B;
+        }
+  }
 }
+

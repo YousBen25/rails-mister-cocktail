@@ -1,7 +1,8 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path "cocktails.jpg" %>')">
+<%= render 'shared/navbar' %>
+<div class="banner d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path "cocktails.jpg" %>')">
   <div class="container show-info">
-    <div class="row">
-      <div class="col-md-8 card-description">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-7 card-description">
         <div>
           <h1><%= @cocktail.name %></h1>
         </div>
@@ -9,12 +10,12 @@
           <p> <%= "Lorem ipsum sdfnefkqsdfjkqsdfqsdkfq" * 3 %> </p>
         </div>
       </div>
-      <div class="col-md-4 card-ingredient">
+      <div class="col-md-3 card-ingredient ml-4">
         <h3>Ingredients:</h3>
         <ul>
         <% @cocktail.doses.each do |dose|  %>
           <li>
-            <%= dose.ingredient.name %><%= dose.description  %>
+            <%= dose.description  %><%= dose.ingredient.name %>
             <%= link_to dose_path(dose), method: :delete, data: { confirm: "Delete #{dose.ingredient.name} ?" } do %>
               <i class="fas fa-trash-alt"></i>
             <% end %>
