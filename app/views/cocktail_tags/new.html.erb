@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <h1>Add  new tag for <%= @cocktail.name %>:</h1>
+        <%= simple_form_for([@cocktail, @cocktail_tag]) do |f| %>
+          <%= f.input :tag, collection: Tag.all, input_html: { multiple: true, class: 'multiple-select' }, include_hidden: false %>
+          <%= f.button :submit, class: "btn-success" %>
+        <% end %>
+    </div>
+  </div>
+</div>

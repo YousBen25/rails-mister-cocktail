@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cocktail_tags/new'
+  get 'cocktail_tags/create'
   get 'reviews/new'
   get 'reviews/create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

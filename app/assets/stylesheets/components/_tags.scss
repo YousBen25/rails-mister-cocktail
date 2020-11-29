@@ -1,0 +1,25 @@
+.tags-container {
+  ul {
+    display: flex;
+  }
+  li {
+    border: 1px solid white;
+    background-color: #F2545B;
+    color: white;
+    margin-right: 4px;
+    position: relative;
+    i {
+      color: $green;
+    }
+  span {
+    padding: 8px;
+    }
+  }
+}
+
+.delete {
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    right: 1px;
+}
