@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   resources :cocktails, except: [:edit, :update, :destroy] do
     resources :doses, only: [:new, :create]
     resources :reviews, only: [:new, :create]
+    resources :cocktail_tags, only: [:new, :create]
   end
 
   resources :doses, only: [:destroy]
+  resources :cocktail_tags, only: [:destroy]
 
   root "cocktails#index"
 end
