@@ -10,12 +10,12 @@ require 'open-uri'
 require 'json'
 require 'faker'
 
-ingredients = JSON.parse(open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read)
+# ingredients = JSON.parse(open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read)
 
-puts "Start creating ingredients database"
-ingredients["drinks"].each do |ingredient|
-  Ingredient.create(name: ingredient["strIngredient1"])
-end
+# puts "Start creating ingredients database"
+# ingredients["drinks"].each do |ingredient|
+#   Ingredient.create(name: ingredient["strIngredient1"])
+# end
 
 # puts "end of procedure !!"
 # Cocktail.destroy_all
@@ -29,3 +29,11 @@ end
 # end
 
 # puts "ending seeding"
+
+Tag.create!(name: "Sweet")
+Tag.create!(name: "Strong")
+Tag.create!(name: "Sour")
+Tag.create!(name: "Fruity")
+Tag.create!(name: "Spicy")
+Tag.create!(name: "Colory")
+Tag.create!(name: "Misterious")
