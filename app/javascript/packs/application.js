@@ -10,7 +10,7 @@ require("channels")
 import 'bootstrap';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { loadDynamicBannerText } from '../components/banner';
-import { initSelect2 } from '../components/init_select2';
+import { initSelect2, multipleSelect } from '../components/init_select2';
 import { previewImageOnFileSelect } from '../components/photo_preview';
 
 
@@ -26,4 +26,5 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initSelect2();
   previewImageOnFileSelect();
+  multipleSelect();
 });
