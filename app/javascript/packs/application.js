@@ -7,12 +7,14 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+
 import 'bootstrap';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { loadDynamicBannerText } from '../components/banner';
 import { initSelect2, multipleSelect } from '../components/init_select2';
 import { previewImageOnFileSelect } from '../components/photo_preview';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initAutocomplete  } from '../plugins/init_autocomplete.js';
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -29,4 +31,5 @@ document.addEventListener('turbolinks:load', () => {
   previewImageOnFileSelect();
   multipleSelect();
   initMapbox();
+  initAutocomplete();
 });

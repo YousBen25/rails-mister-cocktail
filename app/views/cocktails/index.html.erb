@@ -1,3 +1,4 @@
+<% tag_arr = ["Sweet","Strong", "Sour", "Fruity", "Spicy", "Colory", "Misterious"] %>
 <%= render 'shared/navbar' %>
 <div class="banner  d-flex flex-column align-items-center justify-content-end" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(' <%= cl_image_path "izh5efichs8emgcvdjsy" %>')">
   <div class="container text-center">
@@ -8,6 +9,13 @@
     <div class="d-flex justify-content-center">
         <form class="form-inline my-2 my-lg-0" action="/">
           <input class="form-control mr-sm-2" name="query" type="search" placeholder="Mojito? Kaipi ..." aria-label="Search">
+          <select class="multiple-select" name="cocktail_type" id="job-date-search" placeholder = "Tags">
+            <option value="">--Please choose a tag--</option>
+            <% tag_arr.each do |tag| %>
+              <option value=<%=tag%>><%= tag.capitalize %></option>
+            <%end%>
+          </select>
+          <input type="text" name = "address" placeholder = 'Address' id = "cocktail-address-home">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
