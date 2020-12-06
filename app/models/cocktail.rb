@@ -6,5 +6,7 @@ class Cocktail < ApplicationRecord
   has_one_attached :photo
   has_many :ingredients, through: :doses
   validates :name, presence: true, uniqueness: true
-  validates :photo, presence: true
+  # validates :photo, presence: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end

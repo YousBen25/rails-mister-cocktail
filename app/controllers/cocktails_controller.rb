@@ -6,6 +6,13 @@ class CocktailsController < ApplicationController
     else
       @cocktails = Cocktail.all
     end
+    @markers = @cocktails.geocoded.map do |cocktail|
+      {
+        lat: cocktail.latitude,
+        lng: cocktail.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { cocktail: cocktail })
+      }
+    end
   end
 
   def show

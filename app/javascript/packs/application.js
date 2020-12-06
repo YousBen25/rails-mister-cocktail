@@ -12,6 +12,7 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { loadDynamicBannerText } from '../components/banner';
 import { initSelect2, multipleSelect } from '../components/init_select2';
 import { previewImageOnFileSelect } from '../components/photo_preview';
+import { initMapbox } from '../plugins/init_mapbox';
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -27,4 +28,5 @@ document.addEventListener('turbolinks:load', () => {
   initSelect2();
   previewImageOnFileSelect();
   multipleSelect();
+  initMapbox();
 });

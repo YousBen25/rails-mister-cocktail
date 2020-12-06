@@ -14,13 +14,14 @@
               <li>
                 <span><%= cocktail_tag.tag.name %></span>
                 <%= link_to cocktail_tag_path(cocktail_tag), method: :delete, class: "delete" do %>
-                    <i class="fas fa-times text-white"></i>
+                  <i class="fas fa-times text-white"></i>
                 <% end %>
               </li>
               <% end %>
-              <li class="bg-transparent"><%= link_to new_cocktail_cocktail_tag_path(@cocktail) do %>
-                    <i class="far fa-plus-square"></i>
-                  <% end %>
+              <li class="bg-transparent">
+                <%= link_to new_cocktail_cocktail_tag_path(@cocktail) do %>
+                  <i class="far fa-plus-square"></i>
+                <% end %>
               </li>
             </ul>
           </div>

@@ -14,9 +14,14 @@
   </div>
 </div>
 
+
+
+
+<div class="d-flex">
 <div class="container py-5">
   <div class="row">
       <% @cocktails.each do |cocktail| %>
+      <% if cocktail.photo.attached?%>
         <div class="col-12 col-md-4">
           <%= link_to cocktail_path(cocktail) do %>
             <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key %>')">
@@ -24,8 +29,26 @@
             </div>
           <% end %>
         </div>
+      <% else %>
+        <div class="col-12 col-md-4">
+          <%= link_to cocktail_path(cocktail) do %>
+            <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "izh5efichs8emgcvdjsy" %>')">
+              <h2><%=cocktail.name%></h2>
+            </div>
+          <% end %>
+        </div>
+      <% end  %>
       <% end %>
   </div>
+</div>
+<div class="map-container py-5">
+  <div id="map"
+       style="width: 100%; height: 600px; margin-top: 14px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
+
 </div>
 <%= render "shared/footer" %>
 
